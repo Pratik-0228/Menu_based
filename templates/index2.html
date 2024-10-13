@@ -1,0 +1,1124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio and Menu Project</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        /* Sticky Header */
+        .navbar {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background-color: #343a40;
+            padding: 10px 20px;
+        }
+        .navbar a {
+            color: white;
+            margin: 0 10px;
+            font-weight: 500;
+        }
+        .navbar a:hover {
+            text-decoration: none;
+            color: #ffc107;
+        }
+
+        /* Section Styling */
+        section {
+            padding: 60px 20px;
+        }
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Skill Hover Effect */
+        #skills span {
+            display: inline-block;
+            margin: 5px;
+            transition: transform 0.3s ease-in-out;
+        }
+        #skills span:hover {
+            transform: translateY(-20px);
+        }
+
+        /* Typing Animation for Name */
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+        @keyframes blink {
+            0% { border-color: transparent; }
+            50% { border-color: black; }
+            100% { border-color: transparent; }
+        }
+        .typing-text {
+            font-size: 3rem;
+            font-weight: bold;
+            color: black;
+            overflow: hidden;
+            border-right: 3px solid black;
+            white-space: nowrap;
+            animation: typing 3s steps(30, end) infinite alternate, blink 0.75s step-end infinite;
+        }
+        .profile-image {
+            transition: transform 0.3s ease; /* Smooth transition for scaling */
+            border-radius: 50%; /* Ensures the image is circular */
+        }
+        .profile-image:hover {
+            transform: scale(2.1); /* Slightly increase the size on hover */
+        }
+
+    </style>
+
+
+</head>
+<body>
+
+    <!-- Sticky Header -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <div class="navbar-nav ms-auto">
+                <a href="#info" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#menu-project" class="nav-link">Projects</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- About Section -->
+    <section id="info" class="p-5" style="background-color: white;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 text-start">
+                    <h1 style="font-size: 5rem; color: black;">Hey,</h1>
+                    <h2 class="typing-text">This is Pratik Ram Sawarkar</h2>
+                    <p style="font-size: 1.5rem; color: black; margin-top: 20px;">
+                        I am currently pursuing my Bachelor's degree at the Government College of Engineering, Karad, 
+                        specializing in Electronics and Telecommunications. I have a deep interest in cloud computing 
+                        and machine learning, constantly exploring new technologies to solve real-world challenges.
+                    </p>
+                </div>
+                <div class="col-lg-4 d-flex justify-content-center align-items-center">
+                    <img src="profile.jpg" alt="Pratik Ram Sawarkar" class="profile-image" style="width: 200px; height: 200px; transition: transform 0.3s ease;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="p-5 text-center bg-light">
+        <div class="container">
+            <h1 class="display-4 mb-4">Skills</h1>
+            <p style="font-size: 1.5rem; font-weight: 500;">
+                <span class="skill-box" style="background-color: #ffc107; color: black; padding: 5px 10px; border-radius: 5px;">HTML</span>
+                <span class="skill-box" style="background-color: #28a745; color: white; padding: 5px 10px; border-radius: 5px;">CSS</span>
+                <span class="skill-box" style="background-color: #007bff; color: white; padding: 5px 10px; border-radius: 5px;">JavaScript</span>
+                <span class="skill-box" style="background-color: #ff5722; color: white; padding: 5px 10px; border-radius: 5px;">Python</span>
+                <span class="skill-box" style="background-color: #17a2b8; color: white; padding: 5px 10px; border-radius: 5px;">Flask</span>
+                <span class="skill-box" style="background-color: #f44336; color: white; padding: 5px 10px; border-radius: 5px;">AWS</span>
+                <span class="skill-box" style="background-color: #9c27b0; color: white; padding: 5px 10px; border-radius: 5px;">Linux</span>
+            </p>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="portfolio" class="p-5 text-center" style="background-color: #fffcfc; color: #000000;">
+        <div class="container">
+            <h1 class="display-4 fw-bold mb-4" style="color: #000000;">My Portfolio</h1>
+            <p class="lead mb-5" style="font-size: 1.25rem;">Welcome to my portfolio! Explore my projects, skills, and experiences that demonstrate my journey as a cloud and machine learning enthusiast.</p>
+
+            <div class="row text-start">
+                <div class="col-md-6 mb-4">
+                    <h2 class="h4" style="color: #000000;">Projects:</h2>
+                    <ul class="list-unstyled">
+                        <li><strong>Aasani-Say:</strong> A web application enabling real-time sign language translation using AI and ML models.</li>
+                        <li><strong>Menu Project:</strong> A versatile menu with tasks like SMS sending, AWS integration, EC2 management, and more.</li>
+                        <li><strong>IoT Smart System:</strong> Developed a smart system using Raspberry Pi and AWS for real-time data monitoring.</li>
+                    </ul>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <h2 class="h4" style="color: #000000;">Technologies:</h2>
+                    <ul class="list-unstyled">
+                        <li><strong>Cloud:</strong> AWS EC2, S3, IAM</li>
+                        <li><strong>Machine Learning:</strong> TensorFlow, Kaggle, Python</li>
+                        <li><strong>Frontend:</strong> HTML, CSS, JavaScript, Bootstrap</li>
+                        <li><strong>Backend:</strong> Python Flask</li>
+                        <li><strong>DevOps:</strong> Docker, Linux</li>
+                    </ul>
+                </div>
+
+                <div class="row mt-4">
+                    <div class="col-md-12">
+                        <h2 class="h4" style="color: #000000;">Achievements:</h2>
+                        <p>
+                            <li>Successfully implemented a live sign language interpreter.</li>
+                            <li>Worked with multiple AWS services to optimize web apps and streamline user experience.</li>
+                            <li>Trained machine learning models to solve complex problems efficiently.</li>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <!-- Info Section -->
+ 
+
+    <!-- Menu Project Section -->
+    <section id="menu-project" class="p-5 text-center">
+        <h1 class="display-4">Menu Project</h1>
+        <div class="container">
+            <div class="container mt-5">
+                <h2 class="text-center mb-4"> Python tasks</h2>
+                <div class="accordion" id="menuAccordion">
+
+                    <!-- Task 1: Send SMS -->
+                    <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Send SMS Task
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#menuAccordion">
+                        <div class="accordion-body">
+                            <form id="smsForm">
+                                <div class="mb-3">
+                                    <label for="phoneNumber" class="form-label">Phone Number:</label>
+                                    <input type="text" class="form-control" id="phoneNumber" placeholder="Enter phone number">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="message" class="form-label">Message:</label>
+                                    <textarea class="form-control" id="message" rows="3"></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Send SMS</button>
+                            </form>
+                            <div id="smsResult" class="mt-3"></div> <!-- Result display -->
+                        </div>
+                    </div>
+                    </div>
+
+                    <!-- Task 2: Make a Call -->
+                    <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Make a Call Task
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#menuAccordion">
+                        <div class="accordion-body">
+                            <form id="callForm">
+                                <div class="mb-3">
+                                    <label for="callNumber" class="form-label">Phone Number:</label>
+                                    <input type="text" class="form-control" id="callNumber" placeholder="Enter phone number to call">
+                                </div>
+                                <button type="submit" class="btn btn-primary">Make Call</button>
+                            </form>
+                        </div>
+                    </div>
+                    </div>
+
+                    <!-- Task 3: Send Email -->
+                    <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Send Email Task
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#menuAccordion">
+                        <div class="accordion-body">
+                            <form id="emailForm">
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email:</label>
+                                    <input type="email" class="form-control" id="email" placeholder="Enter email">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="emailSubject" class="form-label">Subject:</label>
+                                    <input type="text" class="form-control" id="emailSubject" placeholder="Enter subject">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="emailBody" class="form-label">Message:</label>
+                                    <textarea class="form-control" id="emailBody" rows="3"></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Send Email</button>
+                            </form>
+                        </div>
+                    </div>
+                    </div>
+
+                    <!-- Task 4: Search Bar -->
+                    <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFour">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        Search Bar Task
+                        </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#menuAccordion">
+                        <div class="accordion-body">
+                            <form id="searchForm">
+                                <div class="mb-3">
+                                    <label for="query" class="form-label">Search Query:</label>
+                                    <input type="text" class="form-control" id="query" placeholder="Enter search query">
+                                </div>
+                                <button type="submit" class="btn btn-primary">Search</button>
+                            </form>
+                            <div id="results" class="mt-3"></div> <!-- Result display -->
+                        </div>
+                    </div>
+                    </div>
+
+                    <!-- Task 5: Get Current Location -->
+                    <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingSix">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                            Get Current Location Task
+                        </button>
+                    </h2>
+                    <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#menuAccordion">
+                        <div class="accordion-body">
+                            <button type="button" class="btn btn-primary w-100" onclick="getLocation()">Find My Location</button>
+                            <div id="locationResult" class="result-block mt-3"></div>
+                        </div>
+                    </div>
+                    </div>
+
+                    <!-- Task 6: Fetch Weather Information -->
+                    <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingEight">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                            Fetch Weather Information Task
+                        </button>
+                    </h2>
+                    <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight" data-bs-parent="#menuAccordion">
+                        <div class="accordion-body">
+                            <form onsubmit="event.preventDefault(); fetchWeather();">
+                                <div class="mb-3">
+                                    <label for="cityName" class="form-label">City Name:</label>
+                                    <input type="text" class="form-control" id="cityName" placeholder="Enter city name">
+                                </div>
+                                <button type="submit" class="btn btn-primary">Fetch Weather</button>
+                            </form>
+                            <div id="weatherResult" class="result-block mt-3"></div>
+                        </div>
+                    </div>
+                    </div>
+
+                    <!-- Task 7: Fetch Current Time -->
+                    <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTen">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+                            Fetch Current Time Task
+                        </button>
+                    </h2>
+                    <div id="collapseTen" class="accordion-collapse collapse" aria-labelledby="headingTen" data-bs-parent="#menuAccordion">
+                        <div class="accordion-body">
+                            <button type="button" class="btn btn-primary w-100" onclick="getCurrentTime()">Get Current Time</button>
+                            <div id="timeResult" class="result-block mt-3"></div>
+                        </div>
+                    </div>
+                    </div>
+
+                    <!-- Task 8: Text to Speech -->
+                    <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingSeven">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                            Text to Speech Task
+                        </button>
+                    </h2>
+                    <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#menuAccordion">
+                        <div class="accordion-body">
+                            <input type="text" class="form-control mb-3" id="textToSpeak" placeholder="Enter text to speak">
+                            <button type="button" class="btn btn-primary w-100" onclick="sendTextToSpeak()">Speak</button>
+                            <div id="textToSpeechResult" class="result-block mt-3"></div>
+                        </div>
+                    </div>
+                    </div>
+                
+                    <!-- Task 9: send msg through whatsapp-->
+                    <!-- Send WhatsApp Message -->
+                    <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingWhatsApp">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWhatsApp" aria-expanded="false" aria-controls="collapseWhatsApp">
+                            Send WhatsApp Message
+                        </button>
+                    </h2>
+                    <div id="collapseWhatsApp" class="accordion-collapse collapse" aria-labelledby="headingWhatsApp" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <div class="form-group">
+                                <label for="whatsappNumber">Enter Phone Number (With Country Code):</label>
+                                <input type="text" id="whatsappNumber" class="form-control" placeholder="e.g., +1234567890">
+                            </div>
+                            <div class="form-group">
+                                <label for="whatsappMessage">Enter Message:</label>
+                                <textarea id="whatsappMessage" rows="4" class="form-control" placeholder="Enter your message"></textarea>
+                            </div>
+                            <button id="sendWhatsAppButton" class="btn btn-primary mt-3">Send WhatsApp Message</button>
+                            <div id="whatsappResult" class="mt-3"></div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="container mt-5"> 
+                <h2 class="text-center mb-4"> ML tasks</h2>  
+                <div class="accordion" id="menuAccordion">
+                    <!-- Task 9: Apply Filters to Your Image -->
+                    <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThirteen">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThirteen" aria-expanded="false" aria-controls="collapseThirteen">
+                            Apply Filters to Your Image Task
+                        </button>
+                    </h2>
+                    <div id="collapseThirteen" class="accordion-collapse collapse" aria-labelledby="headingThirteen" data-bs-parent="#menuAccordion">
+                        <div class="accordion-body">
+                            <form id="uploadForm" enctype="multipart/form-data" onsubmit="event.preventDefault(); applyFilter();">
+                                <input type="file" class="form-control mb-3" id="image" name="image" accept="image/*" required>
+                                <select class="form-select mb-3" id="filter" name="filter">
+                                    <option value="grayscale">Grayscale</option>
+                                    <option value="blur">Blur</option>
+                                    <option value="edge">Edge Detection</option>
+                                    <option value="sepia">Sepia</option>
+                                </select>
+                                <button type="button" class="btn btn-primary w-100" onclick="applyFilter()">Apply Filter</button>
+                                <h3 class="mt-3">Filtered Image:</h3>
+                                <img id="filteredImage" alt="Your filtered image will appear here" class="img-fluid" />
+                            </form>
+                        </div>
+                    </div>
+                    </div>
+
+                    <!-- Task 10: Gemini API Task -->
+                    <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingEleven">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEleven" aria-expanded="false" aria-controls="collapseEleven">
+                            Gemini API Task
+                        </button>
+                    </h2>
+                    <div id="collapseEleven" class="accordion-collapse collapse" aria-labelledby="headingEleven" data-bs-parent="#menuAccordion">
+                        <div class="accordion-body">
+                            <div class="mb-3">
+                                <label for="prompt" class="form-label">Enter Prompt:</label>
+                                <input type="text" class="form-control" id="prompt" placeholder="Type your prompt here" required>
+                            </div>
+                            <button type="button" class="btn btn-primary w-100" onclick="sendPrompt()">Send Prompt</button>
+                            <div id="response" class="result-block mt-3"></div>
+                        </div>
+                    </div>
+                    </div>
+
+                    <!-- Task 11: ML Dataset Processor -->
+                    <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingNine">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                            Process Dataset Task
+                        </button>
+                    </h2>
+                    <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine" data-bs-parent="#menuAccordion">
+                        <div class="accordion-body">
+                            <form id="datasetForm" onsubmit="event.preventDefault(); processDataset();">
+                                <div class="mb-3">
+                                    <label for="file" class="form-label">Upload Dataset (CSV):</label>
+                                    <input type="file" class="form-control" id="file" accept=".csv" required>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Process Dataset</button>
+                            </form>
+                            <div id="resultContainer" class="mt-3"></div>
+                        </div>
+                    </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="container mt-5">
+                <h2 class="text-center mb-4"> AWS tasks</h2>
+                <div class="accordion" id="menuAccordion">
+                    <!-- Task 12: ec2 instance launch -->
+                    <!-- Accordion Item 2 with Launch EC2 Instance Form -->
+                    <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingEC2">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEC2" aria-expanded="false" aria-controls="collapseEC2">
+                            Launch EC2 Instance
+                        </button>
+                    </h2>
+                    <div id="collapseEC2" class="accordion-collapse collapse" aria-labelledby="headingEC2" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                
+                            <!-- Launch EC2 Instance -->
+                            <h3>Launch EC2 Instance</h3>
+                            <form id="launchEC2Form" method="post">
+                                <label for="instance_type">Instance Type:</label>
+                                <select id="instance_type" name="instance_type" required>
+                                    <option value="t2.micro">t2.micro</option>
+                                    <option value="t2.small">t2.small</option>
+                                    <option value="t2.medium">t2.medium</option>
+                                    <!-- Add more instance types as needed -->
+                                </select>
+                
+                                <label for="ami_id">AMI ID:</label>
+                                <input type="text" id="ami_id" name="ami_id" placeholder="e.g., ami-0123456789abcdef0" required>
+                
+                                <label for="key_name">Key Pair Name:</label>
+                                <input type="text" id="key_name" name="key_name" placeholder="Your Key Pair Name" required>
+                
+                                <label for="security_group">Security Group:</label>
+                                <input type="text" id="security_group" name="security_group" placeholder="Your Security Group Name" required>
+                
+                                <button type="submit" class="btn btn-primary mt-2">Launch Instance</button>
+                            </form>
+                
+                            <!-- Display Result -->
+                            <div id="ec2-result" class="mt-4"></div>
+                        </div>
+                    </div>
+                    </div>
+                
+
+                   <!-- Task 13 : s3 bucket -->
+                    <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingS3Bucket">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseS3Bucket" aria-expanded="true" aria-controls="collapseS3Bucket">
+                            S3 Bucket Management
+                        </button>
+                    </h2>
+                    <div id="collapseS3Bucket" class="accordion-collapse collapse" aria-labelledby="headingS3Bucket" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                
+                            <!-- Create S3 Bucket -->
+                            <h3>Create S3 Bucket</h3>
+                            <form id="createBucketForm" method="post">
+                                <label for="bucket_name">Bucket Name:</label>
+                                <input type="text" id="bucket_name" name="bucket_name" required>
+                                <button type="submit" class="btn btn-primary">Create Bucket</button>
+                            </form>
+                
+                            <hr>
+                
+                            <!-- Upload File to S3 Bucket -->
+                            <h3>Upload File to S3 Bucket</h3>
+                            <form id="uploadFileForm" method="post" enctype="multipart/form-data">
+                                <label for="bucket_name_upload">Select Bucket:</label>
+                                <select id="bucket_name_upload" name="bucket_name" required>
+                                    <!-- Dynamic bucket names will be inserted here -->
+                                </select>
+                                <label for="file">Choose File:</label>
+                                <input type="file" id="file" name="file" required>
+                                <button type="submit" class="btn btn-primary">Upload File</button>
+                            </form>
+                
+                            <hr>
+                
+                            <!-- List Files in S3 Bucket -->
+                            <h3>List Files in S3 Bucket</h3>
+                            <form id="listFilesForm" method="post">
+                                <label for="bucket_name_list">Select Bucket:</label>
+                                <select id="bucket_name_list" name="bucket_name" required>
+                                    <!-- Dynamic bucket names will be inserted here -->
+                                </select>
+                                <button type="submit" class="btn btn-primary">List Files</button>
+                            </form>
+                
+                            <!-- Display Result -->
+                            <div id="s3-result" class="mt-4"></div>
+                        </div>
+                    </div>
+                    </div>                
+
+                    <!-- Task 14: create IAM user -->
+                    <!-- Create IAM User -->
+                    <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingIAMUser">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseIAMUser" aria-expanded="false" aria-controls="collapseIAMUser">
+                            Create IAM User
+                        </button>
+                    </h2>
+                    <div id="collapseIAMUser" class="accordion-collapse collapse" aria-labelledby="headingIAMUser" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <div class="form-group">
+                                <label for="iamUsername">Enter IAM User Name:</label>
+                                <input type="text" id="iamUsername" class="form-control" placeholder="Enter IAM User Name">
+                            </div>
+                            <div class="form-group">
+                                <label for="iamPolicy">Enter Policy (JSON format):</label>
+                                <textarea id="iamPolicy" rows="5" class="form-control" placeholder="Enter Policy JSON"></textarea>
+                            </div>
+                            <button id="createIAMUserButton" class="btn btn-primary mt-3">Create IAM User</button>
+                            <div id="iamResult" class="mt-3"></div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+                
+        <div class="container">
+            <div class="container mt-5">
+                <h2 class="text-center mb-4"> Linux tasks</h2>
+                <div class="accordion" id="menuAccordion">
+                    <!-- Task 14: linux terminal -->
+                    <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTerminal">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTerminal" aria-expanded="false" aria-controls="collapseTerminal">
+                            Linux Terminal Task
+                        </button>
+                    </h2>
+                    <div id="collapseTerminal" class="accordion-collapse collapse" aria-labelledby="headingTerminal" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <div id="terminal-interface">
+                                <pre id="terminal-output" style="background-color: black; color: white; padding: 10px; height: 300px; overflow-y: scroll;">
+                $ <span id="terminal-input" contenteditable="true" style="color: lightgreen; outline: none;"></span>
+                                </pre>
+                            </div>
+                            <button type="button" class="btn btn-primary mt-2" onclick="runTerminalCommand()">Run Command</button>
+                        </div>
+                    </div>
+                    </div>   
+                </div>
+            </div>
+        </div>
+  
+                
+                
+        <!-- Add more tasks similarly as accordion items -->
+
+        <!-- Task 15: live html interpreter -->
+        <div class="container mt-5">
+            <h2 class="text-center mb-4"> HTML tasks</h2>
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingHtmlInterpreter">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHtmlInterpreter" aria-expanded="true" aria-controls="collapseHtmlInterpreter">
+                            Live HTML Interpreter
+                        </button>
+                    </h2>
+                    <div id="collapseHtmlInterpreter" class="accordion-collapse collapse show" aria-labelledby="headingHtmlInterpreter" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <div class="form-group">
+                                <label for="htmlCode" class="form-label">Enter HTML Code:</label>
+                                <textarea id="htmlCode" rows="10" placeholder="Enter your HTML code here..." class="form-control" style="resize: none;"></textarea>
+                            </div>
+                            <h4 class="mt-4">Output:</h4>
+                            <div id="htmlOutput"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="p-5 text-center bg-dark text-white fade-up">
+        <div class="container">
+            <h1 class="display-4 mb-4">Contact Me</h1>
+            <p style="font-size: 1.5rem;">You can connect with me via:</p>
+            <a href="https://www.linkedin.com/in/pratik-ram-sawarkar/" class="text-white fs-3 me-3" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            <a href="https://github.com/pratik-sawarkar" class="text-white fs-3" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+            
+        </div>
+    </section>
+    
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+
+    <script>
+        //task 1: To send the text message
+        document.getElementById('smsForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form from submitting the traditional way
+
+            const phoneNumber = document.getElementById('phoneNumber').value;
+            const message = document.getElementById('message').value;
+
+            const smsData = {
+                phoneNumber: phoneNumber,
+                text: message
+            };
+
+            fetch('/send_message', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(smsData)
+            })
+            .then(response => response.json())
+            .then(data => {
+                const smsResult = document.getElementById('smsResult');
+                if (data.success) {
+                    smsResult.innerHTML = `<div class="alert alert-success">${data.success}</div>`;
+                } else {
+                    smsResult.innerHTML = `<div class="alert alert-danger">${data.error}</div>`;
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                document.getElementById('smsResult').innerHTML = `<div class="alert alert-danger">Error: ${error.message}</div>`;
+            });
+        });
+
+    
+        //task 3: to send email
+        function sendEmail(event) {
+            event.preventDefault(); // Prevent form from submitting the traditional way
+
+            // Get the input values
+            const to_email = document.getElementById('to_email').value;
+            const subject = document.getElementById('subject').value;
+            const body = document.getElementById('body').value;
+
+            // Prepare data to send to Flask API
+            const emailData = {
+                to_email: to_email,
+                subject: subject,
+                body: body
+            };
+
+            // Use Fetch API to send the data to the Flask backend
+            fetch('/send_email', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(emailData)
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Display response from the server
+                alert(data.message);
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        }
+    
+        // Task 4: Search bar
+        document.getElementById('searchForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const query = document.getElementById('query').value;
+
+            fetch(`/search?query=${encodeURIComponent(query)}`)
+                .then(response => response.json())
+                .then(data => {
+                    console.log(data);
+                    let resultsDiv = document.getElementById('results');
+                    resultsDiv.innerHTML = '';  // Clear previous results
+
+                    if (data.error) {
+                        resultsDiv.innerHTML = '<p>No results found</p>';
+                    } else {
+                        data.forEach(result => {
+                            let resultItem = document.createElement('div');
+                            resultItem.innerHTML = `<h3><a href="${result.link}" target="_blank">${result.title}</a></h3>
+                                                    <p>${result.snippet}</p>`;
+                            resultsDiv.appendChild(resultItem);
+                        });
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    document.getElementById('results').innerHTML = '<p>An error occurred while fetching results.</p>';
+                });
+        });
+
+    
+        // Task 5: Get Current Location
+        function getLocation() {
+            const resultDiv = document.getElementById('locationResult');
+            
+            // Clear previous result
+            resultDiv.innerHTML = '';
+
+            fetch('/get_location')
+                .then(response => response.json())
+                .then(data => {
+                    if (data.error) {
+                        resultDiv.innerHTML = `<p style="color:red">${data.error}</p>`;
+                    } else {
+                        resultDiv.innerHTML = `<h2>Current Location:</h2>
+                                               <p><strong>Latitude:</strong> ${data.latitude}</p>
+                                               <p><strong>Longitude:</strong> ${data.longitude}</p>
+                                               <p><strong>City:</strong> ${data.city}</p>
+                                               <p><strong>State:</strong> ${data.state}</p>
+                                               <p><strong>Country:</strong> ${data.country}</p>`;   
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    resultDiv.innerHTML = `<p style="color:red">Failed to retrieve location</p>`;
+                });
+        }
+    
+        // Task 6: Fetch Weather Information
+        function fetchWeather() {
+            let cityName = document.getElementById("cityName").value;
+            if (!cityName) {
+                alert("Please enter a city name!");
+                return;
+            }
+
+            fetch(`/weather?city=${encodeURIComponent(cityName)}`)
+                .then(response => response.json())
+                .then(data => {
+                    const weatherResult = document.getElementById("weatherResult");
+                    if (data.error) {
+                        weatherResult.innerHTML = `<strong>Error:</strong> ${data.error}`;
+                    } else {
+                        weatherResult.innerHTML = `<strong>Weather in ${cityName}:</strong><br>Temperature: ${data.temperature}°C<br>Condition: ${data.condition}`;
+                    }
+                })
+                .catch(error => {
+                    console.error("Error:", error);
+                    document.getElementById("weatherResult").innerHTML = `<strong>Error:</strong> ${error}`;
+                });
+        }
+    
+        // Task 7: get the current time
+        function getCurrentTime() {
+            let currentTime = new Date().toLocaleTimeString();
+            document.getElementById("timeResult").innerHTML = `Current Time: ${currentTime}`;
+        }
+
+        // Task 8: Text to Speech
+        function sendTextToSpeak() {
+            const text = document.getElementById('textToSpeak').value;
+            const data = { text: text };
+
+            // Clear previous result
+            const resultDiv = document.getElementById('textToSpeechResult');
+            resultDiv.innerHTML = '';
+
+            fetch('/speak', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    resultDiv.innerHTML = `<p style="color:green">${data.success}</p>`;
+                } else {
+                    resultDiv.innerHTML = `<p style="color:red">${data.error}</p>`;
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                resultDiv.innerHTML = `<p style="color:red">Failed to convert text to speech</p>`;
+            });
+        }
+
+        //task 9: apply filters to image
+        function applyFilter() {
+            var formData = new FormData(document.getElementById('uploadForm'));
+
+            fetch('/apply_filter', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.blob())
+            .then(blob => {
+                const url = URL.createObjectURL(blob);
+                document.getElementById('filteredImage').src = url;
+            })
+            .catch(error => console.error('Error:', error));
+        }
+
+        //task 10: gemini
+        function sendPrompt() {
+        const prompt = document.getElementById('prompt').value;
+
+        if (!prompt) {
+            alert('Please enter a prompt!');
+            return;
+        }
+
+        fetch('/generate', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                prompt: prompt,
+            }),
+        })
+        .then(response => response.json())
+        .then(data => {
+            const responseDiv = document.getElementById('response');
+            if (data.error) {
+                responseDiv.innerHTML = `<strong>Error:</strong> ${data.error}`;
+            } else {
+                responseDiv.innerHTML = `<strong>Response:</strong><br>${data.response}`;
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            document.getElementById('response').innerHTML = `<strong>Error:</strong> ${error}`;
+        });
+
+        }
+
+        //task 11: Function to process the dataset
+        function processDataset() {
+            const formData = new FormData();
+            const fileInput = document.getElementById('file');
+
+            if (fileInput.files.length === 0) {
+                alert("Please select a file.");
+                return;
+            }
+
+            formData.append('file', fileInput.files[0]);
+
+            fetch('/process', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('resultContainer').innerHTML = data; // Display the processed data
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('Failed to process the dataset. Please try again.');
+            });
+        }
+
+        //task 12: aws instance launch 
+        // Handle form submission for launching EC2 instance
+        document.getElementById('launchEC2Form').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            var formData = new FormData(this);
+
+            fetch('/launch_ec2', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.error) {
+                    document.getElementById('ec2-result').innerHTML = `<div class="alert alert-danger">${data.error}</div>`;
+                } else {
+                    document.getElementById('ec2-result').innerHTML = `
+                        <div class="alert alert-success">
+                            ${data.message}<br>
+                            Instance ID: ${data.instance_id}<br>
+                            State: ${data.instance_state}
+                        </div>
+                    `;
+                }
+            })
+            .catch(error => {
+                document.getElementById('ec2-result').innerHTML = `<div class="alert alert-danger">${error}</div>`;
+            });
+        });
+
+        //task 13: create s3 bucket
+        // Fetch buckets list and populate dropdowns
+        function fetchBuckets() {
+            fetch('/get_buckets', {
+                method: 'GET',
+            })
+            .then(response => response.json())
+            .then(data => {
+                const bucketSelectUpload = document.getElementById('bucket_name_upload');
+                const bucketSelectList = document.getElementById('bucket_name_list');
+                bucketSelectUpload.innerHTML = '';
+                bucketSelectList.innerHTML = '';
+
+                data.buckets.forEach(bucket => {
+                    const optionUpload = document.createElement('option');
+                    const optionList = document.createElement('option');
+                    optionUpload.value = optionList.value = bucket;
+                    optionUpload.innerText = optionList.innerText = bucket;
+                    bucketSelectUpload.appendChild(optionUpload);
+                    bucketSelectList.appendChild(optionList);
+                });
+            });
+        }
+
+        // Handle form submission for creating a bucket
+        document.getElementById('createBucketForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const formData = new FormData(this);
+
+            fetch('/create_bucket', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('s3-result').innerHTML = data.message || data.error;
+                fetchBuckets(); // Refresh the bucket list after creating a new one
+            });
+        });
+
+        // Handle form submission for uploading a file
+        document.getElementById('uploadFileForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const formData = new FormData(this);
+
+            fetch('/upload_file', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('s3-result').innerHTML = data.message || data.error;
+            });
+        });
+
+        // Handle form submission for listing files
+        document.getElementById('listFilesForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const formData = new FormData(this);
+
+            fetch('/list_files', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.files) {
+                    let fileList = '<ul>';
+                    data.files.forEach(file => {
+                        fileList += `<li>${file}</li>`;
+                    });
+                    fileList += '</ul>';
+                    document.getElementById('s3-result').innerHTML = fileList;
+                } else {
+                    document.getElementById('s3-result').innerHTML = data.error;
+                }
+            });
+        });
+
+        // Fetch bucket list on page load
+        document.addEventListener('DOMContentLoaded', fetchBuckets);
+
+
+
+        //task 15: create IAM user
+        document.getElementById('createIAMUserButton').addEventListener('click', function() {
+            const iamUsername = document.getElementById('iamUsername').value;
+            const iamPolicy = document.getElementById('iamPolicy').value;
+
+            // API call to create IAM user
+            fetch('/create-iam-user', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    username: iamUsername,
+                    policy: iamPolicy
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Display success or error message
+                const resultDiv = document.getElementById('iamResult');
+                if (data.error) {
+                    resultDiv.innerHTML = `<div class="alert alert-danger">${data.error}</div>`;
+                } else {
+                    resultDiv.innerHTML = `<div class="alert alert-success">${data.message}</div>`;
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        });
+
+
+        // task 14: linux terminal
+        document.getElementById("terminal-input").addEventListener("keydown", function (event) {
+            if (event.key === "Enter") {
+                event.preventDefault();
+                runTerminalCommand();
+            }
+        });
+
+        function runTerminalCommand() {
+            const inputElement = document.getElementById("terminal-input");
+            const command = inputElement.textContent.trim();
+            inputElement.textContent = "";
+
+            if (command) {
+                fetch('/run-terminal-command', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ command }),
+                })
+                .then(response => response.json())
+                .then(data => {
+                    let output = data.output || data.error;
+                    const terminalOutput = document.getElementById('terminal-output');
+                    terminalOutput.innerHTML += `<br><span style="color: lightblue;">$ ${command}</span><br><span>${output}</span><br>$ <span id="terminal-input" contenteditable="true" style="color: lightgreen; outline: none;"></span>`;
+                    terminalOutput.scrollTop = terminalOutput.scrollHeight; // Auto-scroll to the bottom
+                })
+                .catch(error => {
+                    document.getElementById('terminal-output').innerHTML += `<br><span style="color: red;">Error: ${error.message}</span><br>$ <span id="terminal-input" contenteditable="true" style="color: lightgreen; outline: none;"></span>`;
+                });
+            }
+        }
+
+
+        // task 15: live html interpreter
+        document.getElementById("htmlCode").addEventListener("input", function() {
+            const htmlCode = this.value;
+            const outputFrame = document.getElementById("htmlOutput");
+
+            // Clear previous output
+            outputFrame.innerHTML = "";
+
+            // Create a new iframe to render the HTML code
+            const iframe = document.createElement("iframe");
+
+
+            // Append the iframe to the output div
+            outputFrame.appendChild(iframe);
+
+            // Ensure the iframe document is accessible
+            const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+            iframeDoc.open();
+            iframeDoc.write(htmlCode);
+            iframeDoc.close();
+
+        }); 
+
+
+
+    </script>
+</body>
+</html>
